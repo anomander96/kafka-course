@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="kafka-course" />
+        <module name="client-app" />
+        <module name="courier-app" />
+        <module name="palmetto-app" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-app" target="1.8" />
+      <module name="courier-app" target="1.8" />
+      <module name="kafka-course" target="1.8" />
+      <module name="palmetto-app" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="client-app" options="-parameters" />
+      <module name="courier-app" options="-parameters" />
+      <module name="kafka-course" options="-parameters" />
+      <module name="palmetto-app" options="-parameters" />
+    </option>
+  </component>
+</project>

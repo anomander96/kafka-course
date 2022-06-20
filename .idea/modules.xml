@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client-app/client-app.iml" filepath="$PROJECT_DIR$/client-app/client-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/courier-app/courier-app.iml" filepath="$PROJECT_DIR$/courier-app/courier-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-course.iml" filepath="$PROJECT_DIR$/kafka-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/palmetto-app/palmetto-app.iml" filepath="$PROJECT_DIR$/palmetto-app/palmetto-app.iml" />
+    </modules>
+  </component>
+</project>
