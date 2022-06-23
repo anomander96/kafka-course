@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/palmetto_db
+    username: root
+    password: strongroot96
+    jpa:
+      hibernate.ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      # Delegate deserializers
+      spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.LongDeserializer
+      spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+    consumer:
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      enable-auto-commit: false
+

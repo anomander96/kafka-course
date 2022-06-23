@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "orders")
 public class Order {
 
@@ -19,13 +20,13 @@ public class Order {
     private Long orderId;
 
     @Column
-    private Timestamp orderTime;
-
-    @Column
-    private String details;
+    private String pizzaName;
 
     @Column
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
+    public OrderResponse toDto() {
+        return OrderResponse.builder().pizzaName(pizzaName).orderId(orderId).build();
+    }
 }

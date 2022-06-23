@@ -1,4 +1,4 @@
-package com.palmetto.service.data.impl;
+package com.palmetto.service;
 
 import com.palmetto.data.OrderData;
 import com.palmetto.model.Order;
@@ -6,23 +6,19 @@ import com.palmetto.model.OrderRequest;
 import com.palmetto.model.OrderResponse;
 import com.palmetto.model.OrderStatus;
 import com.palmetto.repository.OrderRepository;
-import com.palmetto.service.data.OrderDataService;
 import com.palmetto.service.kafka.producer.ClientOrderProducer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
-@Service
-public class OrderDataServiceImpl implements OrderDataService{
-
-    @Autowired
-    private OrderRepository orderRepository;
+public class ClientOrderService {
 
     @Autowired
     private ClientOrderProducer clientOrderProducer;
 
-    @Override
+    @Autowired
+    private OrderRepository orderRepository;
+
     @Transactional
     public OrderResponse process(OrderRequest orderRequest) {
         Order order = orderRepository.save(buildOrder(orderRequest));

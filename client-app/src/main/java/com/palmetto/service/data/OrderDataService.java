@@ -1,12 +1,10 @@
 package com.palmetto.service.data;
 
 import com.palmetto.model.Order;
+import com.palmetto.model.OrderRequest;
+import com.palmetto.model.OrderResponse;
 
 public interface OrderDataService {
 
-    Order addOrder(Order order);
-
-    Order getOrderById(long id);
-
-    Order updateOrder(Order order);
+    public OrderResponse process(OrderRequest orderRequest);
 }
